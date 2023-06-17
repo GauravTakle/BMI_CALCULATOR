@@ -23,6 +23,8 @@ export default function BmiCalculator() {
     return weight / (calculatedHeight * calculatedHeight);
   }, [weight, height]);
 
+  
+
   return (
     <main>
       <h1>BMI CALCULATOR</h1>
@@ -48,6 +50,15 @@ export default function BmiCalculator() {
       <div className="output-section">
         <p>Your BMI is</p>
         <p className="output">{output.toFixed(2)}</p>
+        <br/>
+        <p><b>BMI Categories</b></p>
+            <ul style={{textAlign : "left"}}>
+                <li>Underweight =  less than 18.5</li>
+                <li>Normal weight = 18.5-24.9</li>
+                <li>Overweight = 25-29.9</li>
+                <li>Obesity = BMI of 30 or greater </li>
+            </ul>
+        
       </div>
     </main>
   );
